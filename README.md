@@ -62,7 +62,7 @@ Open-source team chat software has matured into enterprise-grade software capabl
 
 ### ⭐ Top Open-Source Chat Repositories (Ranked by Stars)
 
-| Repository & Platform 📦 | GitHub Stars 🌟 | License 📄 | Primary Stack 💻 | Architecture Highlights 🔍 |
+| Repository & Platform 📦 | GitHub_Stars 🌟 | License 📄 | Primary Stack 💻 | Architecture Highlights 🔍 |
 | :--- | :--- | :--- | :--- | :--- |
 | **[Rocket.Chat](https://github.com/RocketChat/Rocket.Chat)** | [![Stars](https://img.shields.io/github/stars/RocketChat/Rocket.Chat?style=social&color=white)](https://github.com/RocketChat/Rocket.Chat/stargazers) | MIT Core / EE | TypeScript, Node.js, MongoDB | Omnichannel customer hub, Matrix federation, compliance center, air-gapped on-premise installation. |
 | **[Mattermost](https://github.com/mattermost/mattermost)** | [![Stars](https://img.shields.io/github/stars/mattermost/mattermost?style=social&color=white)](https://github.com/mattermost/mattermost/stargazers) | Source-Available / MIT (Client) | Go, React, PostgreSQL | Single lightweight Go binary, Slack-compatible webhooks, Playbooks incident response, and DevOps ChatOps. |
