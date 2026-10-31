@@ -4,10 +4,12 @@
 
 # Awesome Team Chat & Instant Messaging 💬🚀
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+<a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+[![Awesome](https://awesome.re/badge.svg)](https://github.com/ishandutta2007/Awesome-Awesome-Awesome)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Follow on GitHub](https://img.shields.io/github/followers/ishandutta2007?label=Follow&style=social)](https://github.com/ishandutta2007)
+<a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 
 > **A curated directory of top SaaS enterprise collaboration platforms and production-grade open-source team chat servers.**  
 > Explore channel-based messaging, ChatOps integrations, topic-threaded discussions, Matrix federation, air-gapped deployments, and self-hosted privacy alternatives.
@@ -23,6 +25,8 @@
   - [🛠️ Deep-Dive Architectural Breakdown](#%EF%B8%8F-deep-dive-architectural-breakdown)
 - [⚖️ Architecture & Selection Guide](#%EF%B8%8F-architecture--selection-guide)
 - [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support & Sponsorship](#-support--sponsorship)
+- [⭐ Star History](#-star-history)
 - [📜 Disclaimer & Operational Realities](#-disclaimer--operational-realities)
 
 ---
@@ -130,7 +134,23 @@ Contributions are warmly welcomed! Help us keep this directory exhaustive and up
 3. **Include Specific Data**: Verify exact pricing tiers, free tier constraints, licenses, and official repository links.
 4. **Submit a Pull Request** with a succinct description of changes.
 
-🌟 *Found this resource valuable? Give this repository a star to support open-source collaboration tooling!*
+---
+
+## 💖 Support & Sponsorship
+
+Thank you for visiting and using this curated list! 🌟  
+If you find this project valuable and want to support continued updates, maintenance, and curation of open-source tools:
+
+- ⭐ **Star this repository** to show your appreciation and help others discover it.
+- 🍴 **Fork and share** it with your engineering and DevOps teammates.
+- ☕ **Buy a coffee / Sponsor**: If you'd like to support ongoing development, consider sponsoring via the [GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007).
+
+Your support is deeply appreciated! 🙌
+
+---
+
+##  Star History
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Team-Chat-Instant-Messaging&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Team-Chat-Instant-Messaging&type=date&legend=top-left)
 
 ---
 
