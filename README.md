@@ -1,183 +1,141 @@
-# Awesome-Team-Chat-Instant-Messaging
-
-## Top Team Chat & Instant Messaging Ecosystem
-
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on Channel-Based Messaging, Self-Hosted Chat Servers & Encrypted Communication*  
-
-**Last updated: October 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Team Chat & Instant Messaging**. These tools enable organizations to communicate in real time through channels, direct messages, threads, and integrations—replacing email sprawl with structured, searchable conversation that keeps teams aligned and decisions documented.
-
-
-
-**Examples** include HipChat, Slack, Microsoft Teams, Discord, Mattermost, Rocket.Chat, Cisco Webex, Google Chat, Element, and Chanty (the category leaders).
-
-
-
-**Open-source emphasis**: Team Chat & Instant Messaging is a domain where open-source tooling is **mature and genuinely competitive with commercial platforms for core messaging**. **Rocket.Chat** leads on GitHub health and stars (46k, MIT core, 437 commits in 90 days) and is the clearest choice for compliance-heavy organizations needing air-gapped deployment and omnichannel support . **Mattermost** is the smallest server to operate—a single Go binary against PostgreSQL—and the right pick for small teams wanting a Slack-like experience without heavy infrastructure . **Zulip** offers a topic-threading model that keeps busy channels readable and decisions searchable, suited for distributed async-first teams . **Element (Matrix)** is the only option with **end-to-end encryption by default and cross-organization federation**, but it requires running a separate homeserver (Synapse) and is not beginner-friendly . The critical caveat: **mobile push notifications on self-hosted chat are the hidden operational cost**—Rocket.Chat Community caps at 10,000 pushes/month, Mattermost's free TPNS is not for production, and Element requires configuring a push gateway .
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-products)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[Slack](https://slack.com/)**  
-
-  Channel-based messaging platform with 2,600+ integrations, Block Kit for custom workflows, and best-in-class threading for engineering and ChatOps teams . Standalone pricing: Pro ~$7.25–$8.70/user/month, Business+ ~$13.50–$14.25, Enterprise Grid $21.95–$28.10 (median $26.18) . **No native video meetings**—requires Zoom or Google Meet.
-
-
-
-- **[Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams)**  
-
-  Chat and collaboration hub bundled with Microsoft 365; deep Office file co-authoring, SharePoint, and Planner integration, plus enterprise compliance (Purview, eDiscovery, GCC) . **Zero incremental licensing cost** if already on M365, but UX is heavier than Slack and non-Microsoft integrations rely on Power Automate .
-
-
-
-- **[Google Chat](https://workspace.google.com/)**  
-
-  Default messaging for Google Workspace organizations; integrates with Drive, Docs, and Meet. Simpler than Slack or Teams, but external guest support is less robust .
-
-
-
-- **[Cisco Webex](https://www.webex.com/)**  
-
-  Enterprise messaging within the Webex suite; strong for organizations standardized on Cisco networking and government/regulated environments (FedRAMP Moderate) .
-
-
-
-- **[Discord](https://discord.com/)**  
-
-  Free voice, video, and text chat originally for gaming; popular with open-source projects and communities for unlimited message history on the free tier .
-
-
-
-- **[HipChat](https://www.atlassian.com/)**  
-
-  **Discontinued**—Atlassian shut down HipChat in 2019, migrating users to Slack or Teams. Listed as a historical reference only.
-
-
-
-- **[Chanty](https://www.chanty.com/)**  
-
-  Simple team chat with AI assistant; positioned for small teams wanting an affordable Slack alternative.
-
-
-
-## Open-Source GitHub Projects
-
-
-
-### Full Chat Servers (Slack Alternatives)
-
-
-
-- **[Rocket.Chat](https://github.com/RocketChat/Rocket.Chat)**  
-
-  The most feature-complete open-source **team communication platform** (MIT core, ~46k GitHub stars, health score 99/100) . Supports **air-gapped deployment** for offline/secure environments, **compliance center**, **end-to-end encryption**, role and attribute-based access control, **omnichannel customer service** (live chat, email, social in one inbox), and federation via Matrix . **Best for compliance-heavy organizations** needing message residency inside their own network . **Caveats**: heavier to deploy (monorepo with its own tooling) , and Community edition caps mobile push at 10,000/month via Rocket.Chat Cloud's gateway .
-
-
-
-- **[Mattermost](https://github.com/mattermost/mattermost)**  
-
-  Open-source team messaging platform (~39k GitHub stars) described as **open core**, written in Go and React, running as a **single Linux binary against PostgreSQL**—the smallest server to operate among major options . **Best for small teams (under 50 users)** wanting a Slack-like experience with minimal infrastructure; 1–2 vCPU and 2–4 GB RAM is sufficient . **Edition matters**: the Team Edition (free) provides uncapped message history; the free tier's TPNS push gateway is explicitly **not recommended for production** . Note: the repository is source-available rather than fully open source per Repoly's assessment .
-
-
-
-### Threaded & Structured Chat
-
-
-
-- **[Zulip](https://github.com/zulip/zulip)**  
-
-  Open-source team chat built around **streams and topics** rather than a single fast-moving channel (Apache-2.0, ~26k GitHub stars) . Conversations are organized by subject (e.g., "release-planning," "customer-feedback"), keeping related replies together and making historical decisions **searchable and reusable** . **Best for distributed engineering, research, and async-first teams** where conversation history and organized decisions matter more than real-time chat feel . **Caveat**: the stream-and-topic model requires onboarding—teams used to standard channels may initially create inconsistent topic names .
-
-
-
-### Encrypted & Federated Chat
-
-
-
-- **[Element (Matrix)](https://github.com/element-hq/element-web)**  
-
-  The reference **web and desktop client** for the Matrix protocol (AGPL-3.0) . **End-to-end encryption is real, audited, and the default** for direct messages and private rooms; **federation across organizations is a first-class feature**, enabling cross-company collaboration where neither side lives in the other's tenant . **Critical caveat**: Element is a **client, not a server**—you must run a Matrix homeserver (Synapse) separately, which is heavy on resources (4 vCPU/8 GB RAM minimum for raw Synapse; 16 GB safer for active federation) and requires PostgreSQL tuning . **Best for teams needing E2E encryption or cross-organizational federation specifically**—not for teams simply wanting a cheaper Slack .
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **Nextcloud Talk** — Self-hosted communication platform with audio, video, chat, web conferencing, and screen sharing; runs on user-controlled servers with advanced encryption . **Best for organizations already using Nextcloud** for file storage and collaboration .
-
-- **Buzz** — Self-hostable workspace where humans and AI agents share the same rooms (Docker/AppImage) . **Niche**—for teams exploring human-AI collaboration in chat.
-
-- **Twake** — Real-time teamwork platform combining professional messaging, storage, and online collaborative editors (Words, Excel, PowerPoint) . **Suite-focused**—chat plus office tools in one self-hosted package.
-
-
-
-**Frameworks for building custom systems**: For **compliance-heavy organizations needing air-gapped deployment**, Rocket.Chat provides the most complete feature set . For **small teams wanting minimal operational overhead**, Mattermost's single binary is the simplest path . For **async-first teams needing searchable, topic-organized decisions**, Zulip . For **E2E encryption and cross-org federation**, Element + Synapse (accepting the infrastructure burden) . No open-source project matches Slack's **2,600+ integration ecosystem** or Teams' **M365 bundling**—those are commercial advantages that self-hosting cannot replicate.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Team chat platforms handling organizational communication must comply with applicable privacy regulations and data retention policies; **self-hosted solutions place full responsibility for security patches, backups, and uptime on the operator** .
-
-- **Open-source team chat is mature for core messaging but has operational trade-offs**—Rocket.Chat and Mattermost provide production-grade chat servers, Zulip offers superior threading for async teams, and Element delivers real E2E encryption . However, **mobile push notifications on self-hosted chat are a hidden complexity**: Rocket.Chat Community caps at 10,000/month, Mattermost's free TPNS is not for production, and Element requires configuring a push gateway . If reliable mobile push is critical, factor this into your evaluation.
-
-- Verify license terms for commercial use; Rocket.Chat uses MIT for its core , Mattermost is source-available/open core (check the specific license file in the repository) , Zulip uses Apache-2.0 , and Element uses AGPL-3.0 .
-
-
+<p align="center">
+  <img src="./assets/banner.svg" alt="Awesome Team Chat &amp; Instant Messaging Banner" width="100%" />
+</p>
+
+# Awesome Team Chat & Instant Messaging 💬🚀
+
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Follow on GitHub](https://img.shields.io/github/followers/ishandutta2007?label=Follow&style=social)](https://github.com/ishandutta2007)
+
+> **A curated directory of top SaaS enterprise collaboration platforms and production-grade open-source team chat servers.**  
+> Explore channel-based messaging, ChatOps integrations, topic-threaded discussions, Matrix federation, air-gapped deployments, and self-hosted privacy alternatives.
 
 ---
 
+## 📑 Table of Contents
 
+- [📊 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [🏢 SaaS & Hosted Platforms](#-saas--hosted-platforms)
+- [💻 Open-Source GitHub Projects](#-open-source-github-projects)
+  - [⭐ Top Open-Source Chat Repositories](#-top-open-source-chat-repositories-ranked-by-stars)
+  - [🛠️ Deep-Dive Architectural Breakdown](#%EF%B8%8F-deep-dive-architectural-breakdown)
+- [⚖️ Architecture & Selection Guide](#%EF%B8%8F-architecture--selection-guide)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [📜 Disclaimer & Operational Realities](#-disclaimer--operational-realities)
 
-**Made for IT administrators, collaboration architects, and teams choosing their communication platform.**  
+---
 
-Let's make team chat more open, but with clear eyes about the push notification caps and operational burden that self-hosting introduces.
+## 📊 Sector Overview & Market Dynamics
+
+The global team collaboration and team chat software market is estimated at **$31.5 Billion** and is projected to expand to **over $55 Billion by 2030** (CAGR ~11.8%). 
+
+The sector exhibits **high concentration with an oligopolistic "winner-take-most" dynamic** at the enterprise enterprise-suite layer (led by **Microsoft Teams** through Office 365 bundling and **Salesforce / Slack** for developer/ChatOps workflows), counterbalanced by a **rapidly growing, fragmented ecosystem** of specialized, privacy-first, and self-hosted open-source alternatives (such as Rocket.Chat, Mattermost, and Matrix/Element) responding to strict data residency, compliance, and air-gapped sovereign requirements.
+
+---
+
+## 🏢 SaaS & Hosted Platforms
+
+The table below lists leading commercial SaaS team messaging platforms sorted in descending order by parent company size (Market Capitalization / Valuation).
+
+| Product / Platform 🏷️ | Company Valuation / Revenue 💰 | Starting Pricing Tier 💵 | Free Tier Limits / Free Trial Policy 🎁 | Key Strengths & Use Cases ⚡ |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams)** | ~$3.1 Trillion Market Cap ($245B+ ARR) | **$4.00/user/month** (Microsoft Teams Essentials) or bundled in M365 Business Basic ($6.00/user/month) | **Free Forever**: 60-min group meeting limit, up to 100 participants per meeting, 5 GB cloud storage per user, uncapped 1:1 chat history. | Deep native integration with Word, Excel, PowerPoint, OneDrive, and SharePoint; comprehensive enterprise security (Purview, GCC High). |
+| **[Google Chat](https://workspace.google.com/)** | ~$2.1 Trillion Market Cap ($350B+ ARR) | **$6.00/user/month** (Google Workspace Business Starter) | **14-day Free Trial** (full access up to 10 users). Free for personal Google accounts with basic 15 GB shared Drive storage. | Native integration into Gmail, Google Drive, Docs, and Google Meet; smart canvas and space collaboration for Workspace teams. |
+| **[Cisco Webex](https://www.webex.com/)** | ~$220 Billion Market Cap ($54B ARR) | **$12.00/user/month** (Webex Meet Plan; Suite at $22.50/user/month) | **Free Forever**: 40-min meeting limit, up to 100 attendees, 1:1 and group messaging, local recording only, 1 GB storage. | Carrier-grade VoIP, Webex Room hardware integration, FedRAMP Moderate certification, and high-security compliance controls. |
+| **[Slack](https://slack.com/)** (Salesforce) | ~$270 Billion Market Cap ($35B ARR) | **$7.25/user/month** (Slack Pro, billed annually; $8.75 monthly) | **Free Forever**: 90-day searchable message and file history, 10 app integrations, 1:1 audio/video huddles with canvas notes. | Premier developer ecosystem, 2,600+ third-party integrations, granular notification controls, and Block Kit custom workflow builder. |
+| **[Discord](https://discord.com/)** | ~$15 Billion Valuation (~$600M ARR) | **$2.99/month** (Nitro Basic) or **$9.99/month** ($99.99/yr Nitro full) | **Free Forever**: Unlimited message history, unlimited channels, up to 25 video participants, 25 MB upload limit, 64 kbps audio quality. | Low-latency voice channels, massive community engagement, server roles/permissions, screen sharing, and bots. |
+| **[Chanty](https://www.chanty.com/)** | ~$15 Million Valuation (~$3M ARR) | **$3.00/user/month** (Chanty Business, billed annually; $4.00 monthly) | **Free Forever**: Up to 5 team members, 10 public/private channels, 20 GB storage per team, 90-day search history, 1:1 audio calls. | Clean lightweight UI, built-in Kanban task management board, Teambook hub, and integrated AI communication helper for small teams. |
+
+> *Note: Legacy solutions like Atlassian HipChat were officially sunset in 2019 in favor of Slack/Teams migrations.*
+
+---
+
+## 💻 Open-Source GitHub Projects
+
+Open-source team chat software has matured into enterprise-grade software capable of air-gapped deployments, end-to-end encryption (E2EE), zero-trust access, and federated protocols.
+
+### ⭐ Top Open-Source Chat Repositories (Ranked by Stars)
+
+| Repository & Platform 📦 | GitHub Stars 🌟 | License 📄 | Primary Stack 💻 | Architecture Highlights 🔍 |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Rocket.Chat](https://github.com/RocketChat/Rocket.Chat)** | [![Stars](https://img.shields.io/github/stars/RocketChat/Rocket.Chat?style=social&color=white)](https://github.com/RocketChat/Rocket.Chat/stargazers) | MIT Core / EE | TypeScript, Node.js, MongoDB | Omnichannel customer hub, Matrix federation, compliance center, air-gapped on-premise installation. |
+| **[Mattermost](https://github.com/mattermost/mattermost)** | [![Stars](https://img.shields.io/github/stars/mattermost/mattermost?style=social&color=white)](https://github.com/mattermost/mattermost/stargazers) | Source-Available / MIT (Client) | Go, React, PostgreSQL | Single lightweight Go binary, Slack-compatible webhooks, Playbooks incident response, and DevOps ChatOps. |
+| **[Zulip](https://github.com/zulip/zulip)** | [![Stars](https://img.shields.io/github/stars/zulip/zulip?style=social&color=white)](https://github.com/zulip/zulip/stargazers) | Apache-2.0 | Python, Django, PostgreSQL | Unique stream and topic-based threading model; prevents conversation context loss in distributed async teams. |
+| **[Element Web](https://github.com/element-hq/element-web)** | [![Stars](https://img.shields.io/github/stars/element-hq/element-web?style=social&color=white)](https://github.com/element-hq/element-web/stargazers) | AGPL-3.0 | TypeScript, React, Matrix | Flagship Matrix client with default auditing-grade End-to-End Encryption (Olm/Megolm) and cross-server federation. |
+| **[Tinode](https://github.com/tinode/chat)** | [![Stars](https://img.shields.io/github/stars/tinode/chat?style=social&color=white)](https://github.com/tinode/chat/stargazers) | GPL-3.0 | Go, gRPC, MySQL/RethinkDB | High-performance messaging daemon and instant messaging server built for extreme speed and low RAM footprint. |
+| **[Matrix Synapse](https://github.com/matrix-org/synapse)** | [![Stars](https://img.shields.io/github/stars/matrix-org/synapse?style=social&color=white)](https://github.com/matrix-org/synapse/stargazers) | AGPL-3.0 | Python, Twisted, PostgreSQL | The reference homeserver implementation for the decentralized Matrix communications protocol. |
+| **[Tailchat](https://github.com/msgbyte/tailchat)** | [![Stars](https://img.shields.io/github/stars/msgbyte/tailchat?style=social&color=white)](https://github.com/msgbyte/tailchat/stargazers) | Apache-2.0 | TypeScript, Node.js, Microservices | "No limits" modern Discord/Slack hybrid alternative with microkernel plugin architecture and web3 capabilities. |
+| **[Revolt Backend](https://github.com/revoltchat/backend)** | [![Stars](https://img.shields.io/github/stars/revoltchat/backend?style=social&color=white)](https://github.com/revoltchat/backend/stargazers) | AGPL-3.0 | Rust, Actix-web, MongoDB | High-throughput open-source user-first chat platform engineered in Rust as a privacy-friendly Discord alternative. |
+| **[Nextcloud Talk](https://github.com/nextcloud/spreed)** | [![Stars](https://img.shields.io/github/stars/nextcloud/spreed?style=social&color=white)](https://github.com/nextcloud/spreed/stargazers) | AGPL-3.0 | PHP, JavaScript, WebRTC | Integrated self-hosted team chat, screen sharing, and audio/video conferencing engine for the Nextcloud ecosystem. |
+
+---
+
+### 🛠️ Deep-Dive Architectural Breakdown
+
+#### 1. Full-Featured Enterprise Chat Servers
+- **[Rocket.Chat](https://github.com/RocketChat/Rocket.Chat)**: The undisputed open-source heavyweight for regulated environments. Offers full omnichannel routing (linking WhatsApp, Instagram, LiveChat, and Email into a single console), complete air-gapped support, data loss prevention (DLP), and Matrix federation.
+  - *Operational Note*: Community edition caps hosted mobile push gateway notifications at 10,000 pushes/month.
+- **[Mattermost](https://github.com/mattermost/mattermost)**: Crafted explicitly for technical and engineering teams. Runs as a hyper-efficient single Go binary connected to PostgreSQL. Features native integration with Jira, GitLab, GitHub, and Jenkins, alongside automated Playbooks for SRE incident response.
+  - *Operational Note*: Free Team Edition provides uncapped database history, but its free TPNS push notification proxy is not SLA-backed for high-volume enterprise production.
+
+#### 2. Asynchronous Thread-First Platforms
+- **[Zulip](https://github.com/zulip/zulip)**: Eliminates message fatigue by organizing streams into distinct explicit subjects/topics. Team members can easily catch up on discussions days later without scrolling through unrelated chatter.
+  - *Operational Note*: Requires team culture discipline to maintain clean topic taxonomy, but yields superior long-term organizational knowledge retention.
+
+#### 3. Decentralized & E2E Encrypted Ecosystems
+- **[Element (Matrix)](https://github.com/element-hq/element-web)** & **[Matrix Synapse](https://github.com/matrix-org/synapse)**: Enables cross-organizational communication where external vendors, partners, and internal staff collaborate across independent, federated homeservers without sharing tenant credentials.
+  - *Operational Note*: Requires running or procuring a dedicated Matrix homeserver (Synapse or Dendrite) with PostgreSQL tuning and a Sygnal push gateway.
+
+#### 4. Community & Discord Alternatives
+- **[Tailchat](https://github.com/msgbyte/tailchat)**: Highly extensible chat platform featuring a plug-and-play microkernel design. Ideal for organizations seeking a private community server with minimal operational baggage.
+- **[Revolt](https://github.com/revoltchat/backend)**: Blazing-fast Discord alternative powered by a Rust backend. Perfect for privacy-focused gaming clans, open-source communities, and student teams.
+
+---
+
+## ⚖️ Architecture & Selection Guide
+
+```
+                      Do you require 100% on-premise / data sovereignty?
+                                     │
+                    ┌────────────────┴────────────────┐
+                   YES                                NO
+                    │                                 │
+   Need E2EE or cross-org federation?      Already on M365 or Workspace?
+        │                       │               │                 │
+       YES                      NO             YES                NO
+        │                       │               │                 │
+ ┌──────────────┐     Topic-first or DevOps?  Teams / Meet   Slack / Discord
+ │Element/Matrix│        │              │
+ └──────────────┘      Zulip       Mattermost /
+                                   Rocket.Chat
+```
+
+- **Choose Slack** if your organization runs heavily on third-party SaaS tools, custom bots, and rapid ChatOps integrations.
+- **Choose Microsoft Teams** if you already subscribe to Microsoft 365, need seamless SharePoint file co-authoring, and want zero incremental licensing overhead.
+- **Choose Mattermost** if you are a DevOps or engineering organization seeking a self-hosted Slack experience with minimum operational footprint.
+- **Choose Rocket.Chat** if you need omni-channel customer support, call center routing, and air-gapped on-premise regulatory compliance.
+- **Choose Zulip** if your team is globally distributed, operates asynchronously across time zones, and values durable discussion threads over real-time chatter.
+- **Choose Element / Matrix** if zero-trust audited End-to-End Encryption and cross-organization federated rooms are strict non-negotiables.
+
+---
+
+## 🤝 How to Contribute
+
+Contributions are warmly welcomed! Help us keep this directory exhaustive and up to date:
+
+1. **Fork the Repository** to your personal GitHub account.
+2. **Add or Update Entries** in `README.md` following the tabular format and objective tone.
+3. **Include Specific Data**: Verify exact pricing tiers, free tier constraints, licenses, and official repository links.
+4. **Submit a Pull Request** with a succinct description of changes.
+
+🌟 *Found this resource valuable? Give this repository a star to support open-source collaboration tooling!*
+
+---
+
+## 📜 Disclaimer & Operational Realities
+
+- This repository is a community-curated directory intended for system architects, IT leaders, and engineering teams.
+- **Self-Hosting Trade-offs**: While self-hosted platforms provide absolute data sovereignty, you assume full responsibility for database backups, SSL certificates, security patches, high availability, and **mobile push notification gateways** (e.g., APNs/FCM limits on free tiers).
+- Verify licensing restrictions for commercial redistribution before self-hosting (e.g., MIT, AGPL-3.0, or Business Source Licensing).
